@@ -54,7 +54,7 @@
         {
           "field_name": "department",
           "label": "Department",
-          "form_snippet": "text.html",
+          "form_snippet": "text.html"
         },
         {
           "field_name": "access_level_comment",
