@@ -71,9 +71,10 @@ class _SchemingMixin(object):
     _validators_loaded = False
 
     def get_helpers(self):
-        if _SchemingMixin._helpers_loaded:
-            return {}
-        _SchemingMixin._helpers_loaded = True
+# Hack fix from https://github.com/ckan/ckanext-scheming/issues/183
+#        if _SchemingMixin._helpers_loaded:
+#            return {}
+#        _SchemingMixin._helpers_loaded = True
         return {
             'scheming_language_text': helpers.scheming_language_text,
             'scheming_choices_label': helpers.scheming_choices_label,
