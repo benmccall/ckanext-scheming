@@ -120,7 +120,14 @@
         "form_snippet": "json.html",
         "display_snippet": "json.html"
       }
+    },
+    {
+      "preset_name": "group",
+      "values": {
+        "form_snippet": "group.html",
+        "display_snippet": "group.html",
+        "output_validators": "scheming_required"
+      }
     }
-
   ]
 }
