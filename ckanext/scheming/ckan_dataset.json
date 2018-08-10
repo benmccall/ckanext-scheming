@@ -41,12 +41,6 @@
             "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
         },
         {
-          "field_name": "group",
-          "label": "Topic",
-          "help_text": "The topic of the dataset identified by the list of possible values. If a data set can fall into multiple categories, select the one which is most significant. This list will be subject to change on an ongoing basis.",
-          "preset": "group"
-        },
-        {
             "field_name": "owner_org",
             "label": "Organization",
             "preset": "dataset_organization"
