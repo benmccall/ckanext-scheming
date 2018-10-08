@@ -46,7 +46,7 @@
             "preset": "dataset_organization"
         },
         {
-          "field_name": "department",
+          "field_name": "publisher_name",
           "label": "Department",
           "form_snippet": "text.html"
         },
@@ -58,11 +58,30 @@
           "help_text": "An explanation of any steps that have been taken to  make a sensitive dataset public, where appropriate, including obfuscation, aggregation, or anonymization."
         },
         {
-          "field_name": "temporal_coverage",
-          "label": "Temporal Coverage",
-          "form_placeholder": "YYYY-MM-DD/YYYY-MM-DD",
+          "field_name": "issued",
+          "label": "Date Created",
+          "form_placeholder": "YYYY-MM-DD",
+          "form_snippet": "text.html"
+        },
+        {
+          "field_name": "modified",
+          "label": "Date Modified",
+          "form_placeholder": "YYYY-MM-DD",
+          "form_snippet": "text.html"
+        },
+        {
+          "field_name": "temporal_start",
+          "label": "Temporal Start",
+          "form_placeholder": "YYYY-MM-DD",
           "form_snippet": "text.html",
-          "help_text": "Start/End periods covered by the data. Separate start and end by a \"/\". Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS) Examples:4 digit year (2013/2015), Date (2011-02-14/2013-07-04), Date/Time (2011-02-14T12:00:00Z/2013-07-04T19:34:00Z)"
+          "help_text": "Start period covered by the data. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
+        },
+        {
+          "field_name": "temporal_end",
+          "label": "Temporal End",
+          "form_placeholder": "YYYY-MM-DD",
+          "form_snippet": "text.html",
+          "help_text": "End period covered by the data. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
         },
         {
           "field_name": "geographic_unit",
@@ -270,13 +289,13 @@
           ]
         },
         {
-            "field_name": "data_steward_name",
+            "field_name": "contact_name",
             "label": "Data Steward Name",
             "form_snippet": "text.html",
             "help_text": "Data Steward's name. Who manages the data and is responsible for making changes to the data? Who understands what the dataset includes and can answer questions about it?"
         },
         {
-            "field_name": "data_steward_email",
+            "field_name": "contact_email",
             "label": "Data Steward Email",
             "form_snippet": "text.html",
             "help_text": "Data Steward's email address."
