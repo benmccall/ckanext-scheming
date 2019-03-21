@@ -10,7 +10,7 @@
             "preset": "title",
             "form_placeholder": "eg. A descriptive title",
             "required": true,
-            "help_text": "Short human-readable name of the asset. Should be in plain English and include sufficient detail to facilitate search and discovery. Avoid acronyms. Use \"title case\" spelling, and no need to list dates."
+            "help_text": "The given name of a project or resource with data of interest; can be a collection of related data sets or files."
         },
         {
             "field_name": "name",
@@ -25,154 +25,128 @@
             "label": "Description",
             "form_snippet": "markdown.html",
             "form_placeholder": "eg. Some useful notes about the data",
-            "help_text": "Provide a longer description of the data (compared to the title) that can be readily understood by non-technical users."
+            "help_text": "A short, summary description of what the data set or files are and what information is included in it. Often, taken directly from the source or provider."
         },
         {
             "field_name": "tag_string",
             "label": "Tags",
             "preset": "tag_string_autocomplete",
             "form_placeholder": "eg. economy, mental health, government",
-            "help_text": "Keywords that describe the dataset. Enter separated by commas or carriage returns. Acronyms acceptable. Use technical and non-technical terms. Use as many as needed. Use plural forms of the word, and also singular forms if different from plural (i.e. leaf/leaves, wife/wives)"
-        },
-        {
-            "field_name": "license_id",
-            "label": "License",
-            "form_snippet": "license.html",
-            "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
-        },
-        {
-            "field_name": "owner_org",
-            "label": "Organization",
-            "preset": "dataset_organization"
-        },
-        {
-          "field_name": "publisher_name",
-          "label": "Department",
-          "form_snippet": "text.html"
-        },
-        {
-          "field_name": "access_level_comment",
-          "label": "Public Access Level Comment",
-          "form_snippet": "markdown.html",
-          "form_placeholder": "eg. An ordinance prohibits release of owner names.",
-          "help_text": "An explanation of any steps that have been taken to  make a sensitive dataset public, where appropriate, including obfuscation, aggregation, or anonymization."
-        },
-        {
-          "field_name": "issued",
-          "label": "Date Created",
-          "form_placeholder": "YYYY-MM-DD",
-          "form_snippet": "text.html"
-        },
-        {
-          "field_name": "modified",
-          "label": "Date Modified",
-          "form_placeholder": "YYYY-MM-DD",
-          "form_snippet": "text.html"
-        },
-        {
-          "field_name": "temporal_start",
-          "label": "Temporal Start",
-          "form_placeholder": "YYYY-MM-DD",
-          "form_snippet": "text.html",
-          "help_text": "Start period covered by the data. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
-        },
-        {
-          "field_name": "temporal_end",
-          "label": "Temporal End",
-          "form_placeholder": "YYYY-MM-DD",
-          "form_snippet": "text.html",
-          "help_text": "End period covered by the data. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
+            "help_text": "Common terms that could be used to search for the data set or files; often more than one tag is used to describe a data set or file. Enter separated by commas or carriage returns. Acronyms acceptable. Use technical and non-technical terms. Use as many as needed. Use plural forms of the word, and also singular forms if different from plural (i.e. leaf/leaves, wife/wives)"
         },
         {
           "field_name": "geographic_unit",
           "label": "Geographic Unit",
           "preset": "select",
-          "help_text": "At what geographic unit is the data collected? For example, if the data is collected by address, it would be Street Address.",
+          "help_text": "The entire geographical designated place represented by the data set or file.",
           "choices": [
             {
               "value": "N/A",
               "label": "Not Applicable"
             },
             {
-              "value": "Latitude/Longitude",
-              "label": "Latitude/Longitude"
+              "value": "Blocks",
+              "label": "Blocks"
             },
             {
-              "value": "Street Address",
-              "label": "Street Address"
+              "value": "Business Districts",
+              "label": "Business Districts"
             },
             {
-              "value": "Intersection/Street Segment",
-              "label": "Intersection/Street Segment"
+              "value": "Community Improvement Districts",
+              "label": "Community Improvement Districts"
             },
             {
-              "value": "Parcel (Block/Lot)",
-              "label": "Parcel (Block/Lot)"
+              "value": "Neighborhoods and Wards",
+              "label": "Neighborhoods and Wards"
             },
             {
-              "value": "Census Block",
-              "label": "Census Block"
+              "value": "Parcel",
+              "label": "Parcel"
             },
             {
-              "value": "Census Block Group",
-              "label": "Census Block Group"
+              "value": "Parks",
+              "label": "Parks"
             },
             {
-              "value": "Census Tract",
-              "label": "Census Tract"
+              "value": "Police Districts",
+              "label": "Police Districts"
             },
             {
-              "value": "Zoning District",
-              "label": "Zoning District"
+              "value": "Port Authority District",
+              "label": "Port Authority District"
             },
             {
-              "value": "Neighborhood",
-              "label": "Neighborhood"
+              "value": "School or District",
+              "label": "School or District"
             },
             {
-              "value": "Political District",
-              "label": "Political District"
+              "value": "Tax Districts",
+              "label": "Tax Districts"
             },
             {
-              "value": "County",
-              "label": "County"
+              "value": "Transportation Development Districts",
+              "label": "Transportation Development Districts"
+            }
+          ]
+        },
+        {
+          "field_name": "spatial_scale",
+          "label": "Spatial Scale",
+          "preset": "select",
+          "help_text": "The geographic unit's measure of physical distance or spatial specificity of the data set or file. This can be the same as or smaller than the geographic unit.",
+          "choices": [
+            {
+              "value": "N/A",
+              "label": "Not Applicable"
             },
             {
-              "value": "Zip Code",
-              "label": "Zip Code"
+              "value": "Address",
+              "label": "Address"
             },
             {
               "value": "Municipal",
               "label": "Municipal"
             },
             {
-              "value": "Raster",
-              "label": "Raster"
+              "value": "Municipal / County",
+              "label": "Municipal / County"
             },
             {
-              "value": "Other",
-              "label": "Other"
+              "value": "Neighborhood",
+              "label": "Neighborhood"
+            },
+            {
+              "value": "School District",
+              "label": "School District"
             }
           ]
         },
         {
-            "field_name": "data_notes",
-            "label": "Data Notes",
-            "form_snippet": "markdown.html",
-            "form_placeholder": "eg. Some additional useful notes about the data",
-            "help_text": "Are there any concerns about overall data reliability? Are there any changes in data collection or methods that the user should be aware of? Are there any constraints with data accuracy? What levels of confidence with this dataset could the user reasonably assume?"
+          "field_name": "temporal_start",
+          "label": "Time Period Covered (Start)",
+          "form_placeholder": "YYYY-MM-DD",
+          "form_snippet": "text.html",
+          "help_text": "The year or the start of the range of years represented by data set of file. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
         },
         {
-            "field_name": "related_documents",
-            "label": "Related Document(s)",
-            "form_snippet": "text.html",
-            "help_text": "Related documents such as technical information about a dataset, developer documentation, etc."
+          "field_name": "temporal_end",
+          "label": "Time Period Covered (End)",
+          "form_placeholder": "YYYY-MM-DD",
+          "form_snippet": "text.html",
+          "help_text": "The year or the end of the range of years represented by data set of file. Use years (YYYY), dates (YYYY-MM-DD), or dates and times (YYY-MM-DD\"T\"HHMMSS)"
+        },
+        {
+          "field_name": "license",
+          "label": "License",
+          "form_snippet": "text.html",
+          "help_text": "The type of copyright license for the data set or files that describes copyright permissions."
         },
         {
           "field_name": "frequency_data_change",
           "label": "Frequency - Data Change",
           "preset": "select",
-          "help_text": "Frequency with which dataset changes. This can be a relative frequency - If the file changes every 1st and 4th Monday, we can code this as bi-monthly, etc.",
+          "help_text": "How frequently information is collected for the data sets or files.",
           "choices": [
             {
               "value": "Not Updated (Historical Only)",
@@ -182,49 +156,25 @@
               "value": "As Needed",
               "label": "As Needed"
             },
-	    {
-	      "value": "Annually",
-	      "label": "Annually"
-	    },
             {
-              "value": "Bi-Annually",
-              "label": "Bi-Annually"
-            },
-            {
-              "value": "Quarterly",
-              "label": "Quarterly"
-            },
-            {
-              "value": "Bi-Monthly",
-              "label": "Bi-Monthly"
+              "value": "Daily",
+              "label": "Daily"
             },
             {
               "value": "Monthly",
               "label": "Monthly"
             },
             {
-              "value": "Bi-Weekly",
-              "label": "Bi-Weekly"
+              "value": "Real Time",
+              "label": "Real Time"
             },
             {
               "value": "Weekly",
               "label": "Weekly"
             },
             {
-              "value": "Daily",
-              "label": "Daily"
-            },
-            {
-              "value": "Hourly",
-              "label": "Hourly"
-            },
-            {
-              "value": "Multiple Times per Hour",
-              "label": "Multiple Times per Hour"
-            },
-            {
-              "value": "Streaming (Real Time)",
-              "label": "Streaming (Real Time)"
+              "value": "Yearly",
+              "label": "Yearly"
             }
           ]
         },
@@ -242,81 +192,73 @@
               "value": "As Needed",
               "label": "As Needed"
             },
-	    {
-	      "value": "Annually",
-	      "label": "Annually"
-	    },
             {
-              "value": "Bi-Annually",
-              "label": "Bi-Annually"
-            },
-            {
-              "value": "Quarterly",
-              "label": "Quarterly"
-            },
-            {
-              "value": "Bi-Monthly",
-              "label": "Bi-Monthly"
+              "value": "Daily",
+              "label": "Daily"
             },
             {
               "value": "Monthly",
               "label": "Monthly"
             },
             {
-              "value": "Bi-Weekly",
-              "label": "Bi-Weekly"
+              "value": "Real Time",
+              "label": "Real Time"
             },
             {
               "value": "Weekly",
               "label": "Weekly"
             },
             {
-              "value": "Daily",
-              "label": "Daily"
-            },
-            {
-              "value": "Hourly",
-              "label": "Hourly"
-            },
-            {
-              "value": "Multiple Times per Hour",
-              "label": "Multiple Times per Hour"
-            },
-            {
-              "value": "Streaming (Real Time)",
-              "label": "Streaming (Real Time)"
+              "value": "Yearly",
+              "label": "Yearly"
             }
           ]
+        },
+        {
+            "field_name": "organization",
+            "label": "Organization",
+            "preset": "text.html"
+        },
+        {
+          "field_name": "publisher_name",
+          "label": "Department",
+          "form_snippet": "text.html"
         },
         {
             "field_name": "contact_name",
             "label": "Data Steward Name",
             "form_snippet": "text.html",
-            "help_text": "Data Steward's name. Who manages the data and is responsible for making changes to the data? Who understands what the dataset includes and can answer questions about it?"
+            "help_text": "The name of the individual employee or contact person responsible for the data set or file."
         },
         {
             "field_name": "contact_email",
             "label": "Data Steward Email",
             "form_snippet": "text.html",
-            "help_text": "Data Steward's email address."
+            "help_text": "The email of the individual employee or contact person responsible for the data set or file. "
+        },
+        {
+            "field_name": "contact_phone",
+            "label": "Data Steward Phone",
+            "form_snippet": "text.html",
+            "help_text": "The office phone number of the individual employee or contact person responsible for the data set or file. "
         }
     ],
     "resource_fields": [
         {
-            "field_name": "url",
-            "label": "URL",
-            "preset": "resource_url_upload"
-        },
-        {
             "field_name": "name",
-            "label": "Name",
-            "form_placeholder": "eg. January 2011 Gold Prices"
+            "label": "Title",
+            "help_text": "The given name of an individual data set or file contained within the larger project or resource."
         },
         {
             "field_name": "description",
             "label": "Description",
             "form_snippet": "markdown.html",
-            "form_placeholder": "Some useful notes about the data"
+            "help_text": "A short, summary description of the individual data set or file. Often, taken directly from the source or provider."
+        },
+        {
+            "field_name": "url",
+            "label": "Link",
+            "preset": "resource_url_upload"
         },
         {
             "field_name": "format",
